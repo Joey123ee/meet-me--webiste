@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Meet Me?</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+    body {
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(135deg, #ffb3d9, #ffe6f2);
+        height: 100vh;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    #box {
+        background: white;
+        width: 370px;
+        padding: 35px;
+        border-radius: 25px;
+        text-align: center;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        animation: pop 0.5s ease;
+    }
+
+    @keyframes pop {
+        from { transform: scale(0.85); opacity: 0; }
+        to { transform: scale(1); opacity: 1; }
+    }
+
+    h2 {
+        font-size: 24px;
+        margin-bottom: 25px;
+    }
+
+    button {
+        padding: 15px 25px;
+        font-size: 18px;
+        border: none;
+        border-radius: 15px;
+        background: #ff4da6;
+        color: white;
+        margin: 10px;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+
+    button:hover {
+        transform: scale(1.08);
+        box-shadow: 0 6px 18px rgba(255,77,166,0.55);
+    }
+</style>
+</head>
+
+<body>
+<div id="box">
+    <h2 id="msg">Hi… do you wanna meet today? 😳</h2>
+
+    <button onclick="yesClick()">Yes</button>
+    <button onclick="noClick()">No</button>
+</div>
+
+<script>
+function yesClick() {
+    const msg = document.getElementById("msg");
+    msg.innerText = "Your wish is my command 😌\nI already reached… come outside madam 💗";
+}
+
+function noClick() {
+    const msg = document.getElementById("msg");
+    msg.innerText = "Okay fine… I’m eating chocolate alone 😛 Not sharing with you… unless you show up. \n please come outside madam 🤍 ";
+}
+</script>
+
+</body>
+</html>
